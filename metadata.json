@@ -1,0 +1,5 @@
+{
+  "name": "Git Cherry-Pick Pro",
+  "description": "A professional developer tool to visualize and execute cherry-picking operations between repositories, featuring AI-powered commit mapping and conflict detection.",
+  "requestFramePermissions": []
+}
