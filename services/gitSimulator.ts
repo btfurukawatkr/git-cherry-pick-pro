@@ -20,7 +20,7 @@ export const getMockRepoData = () => {
       date: new Date(Date.now() - 3600000 * 5).toISOString(),
       message: 'fix: resolve race condition in authentication flow',
       filesChanged: ['src/services/auth.ts'],
-      status: 'picked',
+      status: 'ready',
       sourceRepo: 'SourceApp'
     },
     {
@@ -50,16 +50,6 @@ export const getMockRepoData = () => {
       date: new Date(Date.now() - 86400000 * 3).toISOString(),
       message: 'chore: bump dependencies for security patches',
       filesChanged: ['package.json', 'package-lock.json'],
-      status: 'ready',
-      sourceRepo: 'SourceApp'
-    },
-    {
-      id: 'c6',
-      hash: '0123456789abcdef0123456789abcdef01234567',
-      author: 'John Smith',
-      date: new Date(Date.now() - 86400000 * 4).toISOString(),
-      message: 'feat: implement real-time notifications via websockets',
-      filesChanged: ['src/services/socket.ts', 'src/App.tsx'],
       status: 'ready',
       sourceRepo: 'SourceApp'
     }

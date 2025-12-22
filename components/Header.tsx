@@ -1,7 +1,11 @@
 
 import React from 'react';
 
-export const Header: React.FC = () => {
+interface Props {
+  backendOnline?: boolean;
+}
+
+export const Header: React.FC<Props> = ({ backendOnline = false }) => {
   return (
     <header className="bg-[#161b22] border-b border-[#30363d] px-6 py-4 flex items-center justify-between sticky top-0 z-50">
       <div className="flex items-center gap-3">
@@ -12,14 +16,16 @@ export const Header: React.FC = () => {
         </div>
         <div>
           <h1 className="text-lg font-bold text-white leading-tight">Git Cherry-Pick Pro</h1>
-          <p className="text-xs text-[#8b949e]">Bridge the gap between repositories</p>
+          <p className="text-xs text-[#8b949e]">Enterprise Bridge Strategy</p>
         </div>
       </div>
       
       <div className="flex items-center gap-4">
         <div className="flex items-center gap-2 px-3 py-1.5 bg-[#0d1117] border border-[#30363d] rounded-full text-xs">
-          <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-          <span className="text-[#c9d1d9] font-medium">Remote Engine: Online</span>
+          <div className={`w-2 h-2 rounded-full ${backendOnline ? 'bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)]' : 'bg-red-500 animate-pulse'}`}></div>
+          <span className="text-[#c9d1d9] font-medium">
+            {backendOnline ? 'Spring Boot: Online' : 'Backend: Standalone Mode'}
+          </span>
         </div>
         <button className="text-[#8b949e] hover:text-white transition-colors">
           <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
